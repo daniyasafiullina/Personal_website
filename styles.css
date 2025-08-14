@@ -26,7 +26,6 @@ body {
   line-height: 1.6;
 }
 
-/* Top bar */
 .topbar {
   position: sticky;
   top: 0;
@@ -114,8 +113,8 @@ section {
 }
 
 .avatar {
-  width: 380px;
-  height: 380px;
+  width: clamp(120px, 38vw, 380px);
+  height: clamp(120px, 38vw, 380px); 
   border-radius: 50%;
   background: var(--accent);
   box-shadow: var(--shadow);
@@ -126,7 +125,7 @@ section {
   font-family: var(--display-font);
   font-weight: 800; 
   letter-spacing: 0.015em; 
-  font-size: 7rem; 
+  font-size: clamp(2.4rem, 7vw, 7rem);
   line-height: 1;
   margin: 0 0 0.2rem;
 }
@@ -226,9 +225,11 @@ section {
   line-height: 1.85;
 }
 .about .cols {
-  gap: 48px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
   align-items: flex-start;
 }
+@media (max-width: 900px) { .about .cols { grid-template-columns: 1fr; } }
+
 .about .cols > :first-child {
   padding-top: 16px;
 }
@@ -632,4 +633,9 @@ footer {
 
 @media (prefers-reduced-motion: reduce){
   .hero [data-animate]{ animation: none; opacity: 1; transform: none; filter: none }
+}
+
+@media (max-width: 560px) {
+  nav { display: flex; gap: .75rem; overflow-x: auto; }
+  .brand { display: block; }                           
 }
