@@ -225,7 +225,7 @@ section {
   line-height: 1.85;
 }
 .about .cols {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+  gap: 48px;
   align-items: flex-start;
 }
 @media (max-width: 900px) { .about .cols { grid-template-columns: 1fr; } }
