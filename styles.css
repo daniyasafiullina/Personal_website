@@ -167,6 +167,14 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.28);
   color: #fff;
 }
+.btn.linkedin {
+  background: #0A66C2; 
+  color: #fff;
+}
+.btn.linkedin:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+}
 
 .scroll-indicator {
   position: absolute;
